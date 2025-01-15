@@ -96,6 +96,32 @@
 <div id="portfolio">
     <div class="container"> 
         <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <video 
+                src="images/Social media short film.mp4" 
+                width="650" 
+                height="800" 
+                controls 
+                class="portfolio-video">
+            </video>
+            </div>
+            <div class="work">
+                <div class="work">
+                    <video 
+                    src="images/techow outro 1080P.mp4" 
+                    width="650" 
+                    height="800" 
+                    controls 
+                    class="techwow-video">
+                </video>
+            </div>
+            <div class="work">
+                <img src="images/landing page portfolio.png"
+                width="650" 
+                height="800">
+            </div>
+        </div>
     </div>
 
 </div>
@@ -104,6 +130,12 @@
 
 
 <script>
+    function playVideo(thumbnail) {
+    const video = thumbnail.nextElementSibling;
+    thumbnail.style.display = 'none'; // Hide the thumbnail
+    video.style.display = 'block'; // Show the video
+    video.play(); // Start playing the video
+}
 
     var tablinks = document.getElementsByClassName("tab-links")
     var tabcontents = document.getElementsByClassName("tab-contents")
