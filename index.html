@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persoonlijke portfolio website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b6ff59056e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -27,15 +28,97 @@
 <div id="about">
     <div class="container">
         <div class="row">
-            <div class="äbout-col 1">
-                <img src="images/user.png">
+            <div class="about-col-1">
+                <img src="images/Chris filmen.png">
             </div>
-            <div class="äbout-col 2">
-                <h1>About me</h1>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p></p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web design</span><br>Landing pages, portfolios, games</li>
+                        <li><span>Film</span><br>camera filming, editing, composoting</li>
+                        <li><span>Motion design</span><br>Product promotion, intros, special effects</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>apr. 2020 - apr. 2022</span><br>Lidl Nederland · Parttime</li>
+                        <li><span>apr. 2021 - mei 2022</span><br>Sales Direct Result · Parttime</li>
+                        <li><span>sep. 2022 - feb. 2024</span><br>Flink · Parttime</li>
+                        <li><span>sep. 2023 - feb. 2024</span><br>Sales Uphill Marketing · Parttime</li>
+                        <li><span>jan. 2024 - heden</span><br>SalesLinQ · Zelfstandig / Eigenaar</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Havo</span><br>Comenius Marienburg</li>
+                        <li><span>HBO</span><br>NHL Stenden Hogeschool CMD</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
-    
+<!--------services--------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Ik kan voor u Portfolio sites maken, maar ook custom landing pages</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-film"></i>
+                <h2>Film</h2>
+                <p>Ik kan voor u campagne viedeos maken, social media edits, short movies en BTS movies</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Motion Design</h2>
+                <p>Ik kan voor u bedrijfs intros maken, logo animaties en product animaties</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------portfolio-------->
+<div id="portfolio">
+    <div class="container"> 
+        <h1 class="sub-title">My Work</h1>
+    </div>
+
+</div>
+
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
 </body>
 </html>
