@@ -214,5 +214,60 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 10px;
     display: block;
+    transition: transform 0.5s;
 }
 
+.layer { 
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0; /* Veranderde van 'bottom: 0;' naar 'top: 0;' */
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren */
+    flex-direction: column;
+    padding: 20px; /* Voegt wat ruimte toe rondom de tekst */
+    text-align: center;
+    color: #fff; /* Zorgt ervoor dat de tekst duidelijk zichtbaar is */
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 24px; /* Grotere tekst voor betere zichtbaarheid */
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex; /* Flexbox toevoegen */
+    justify-content: center; /* Horizontaal centreren */
+    align-items: center; /* Verticaal centreren */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optionele schaduw voor styling */
+    transition: all 0.3s ease; /* Animatie-effect bij hover */
+}
+
+.layer a:hover {
+    background: #ff004f;
+    color: #fff;
+    transform: scale(1.1); /* Zoom-effect bij hover */
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
